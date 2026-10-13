@@ -1,0 +1,21 @@
+name: SeaweedFS Packages
+generated: '2026-10-13'
+method: searched
+source: https://search.maven.org/solrsearch/select?q=a:seaweedfs-client ; https://proxy.golang.org/github.com/seaweedfs/seaweedfs/@latest ; https://api.github.com/repos/seaweedfs/seaweedfs/releases/latest
+packages:
+- name: github.com/seaweedfs/seaweedfs
+  registry: pkg.go.dev
+  url: https://pkg.go.dev/github.com/seaweedfs/seaweedfs
+  language: Go
+  official: true
+  version: v0.0.0-20261013005242-8093ecf4c82d
+  published: '2026-10-13'
+  note: Go module of the server and its generated gRPC clients (weed/pb/*_pb); latest GitHub release tag 4.48 published 2026-09-28.
+- name: com.github.chrislusf:seaweedfs-client
+  registry: Maven Central
+  url: https://search.maven.org/artifact/com.github.chrislusf/seaweedfs-client
+  language: Java
+  official: true
+  version: '3.59'
+  published: '2023-11-13'
+  note: Java filer gRPC client built from other/java/client in the seaweedfs/seaweedfs repo (group is the founder's GitHub handle, chrislusf); last published 2023, behind the 4.x server.

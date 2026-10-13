@@ -1,23 +1,129 @@
 aid: seaweedfs
 name: SeaweedFS
-description: 'SeaweedFS is a company surfaced via the API Evangelist harvest backlog (source: market-gap:object-storage)
-  and added to the network as a stub for full-pipeline profiling.'
+description: SeaweedFS is a distributed file system and S3-compatible object store, open source at github.com/seaweedfs/seaweedfs with an Enterprise edition sold at seaweedfs.com (data recovery, self-healing storage, erasure coding automation, point-in-time recovery, support plans). Its components - master, volume, filer, S3 gateway, IAM and message-queue broker - talk over published gRPC services (179 RPCs across 14 .proto files) alongside HTTP and S3 interfaces documented in the project wiki.
 url: https://raw.githubusercontent.com/api-evangelist/seaweedfs/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:market-gap:object-storage
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-13 (local-v5; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-13'
 modified: '2026-10-13'
 tags:
 - Company
-apis: []
+- Object Storage
+- Distributed File System
+- S3 Compatible
+- gRPC
+- Open Source
+- Storage
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Hosts
+  url: hosts/seaweedfs-hosts.yml
+- type: Vendors
+  url: vendors/seaweedfs-vendors.yml
+- type: SDKs
+  url: packages/seaweedfs-packages.yml
+- type: Packages
+  url: packages/seaweedfs-packages.yml
+- type: DomainSecurity
+  url: security/seaweedfs-domain-security.yml
 - type: Website
   url: https://seaweedfs.com
+- type: Documentation
+  url: https://seaweedfs.com/docs/deploy/
+- type: GettingStarted
+  url: https://seaweedfs.com/docs/deploy/
+- type: APIReference
+  url: https://seaweedfs.com/docs/reference/ec_repair/
+- type: Blog
+  url: https://seaweedfs.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/seaweedfs
+- type: SourceCode
+  url: https://github.com/seaweedfs/seaweedfs
+- type: Pricing
+  url: https://seaweedfs.com/docs/pricing/
+- type: Support
+  url: https://seaweedfs.com/docs/support/
+- type: TermsOfService
+  url: https://seaweedfs.com/docs/terms/
+- type: ChangeLog
+  url: https://github.com/seaweedfs/seaweedfs/releases
+apis:
+- aid: seaweedfs:seaweedfs-grpc
+  name: SeaweedFS gRPC API
+  description: 'gRPC services exposed by SeaweedFS cluster components (Seaweed master, VolumeServer, SeaweedFiler, SeaweedS3, SeaweedIdentityAccessManagement, SeaweedMessaging broker and agent, mount, worker and plugin services), published as .proto files in the seaweedfs/seaweedfs repository. The host is self-deployed: each cluster serves these on its own master/volume/filer gRPC ports.'
+  humanURL: https://github.com/seaweedfs/seaweedfs/wiki
+  baseURL: http://{your-filer-host}:8888
+  tags:
+  - gRPC
+  - Object Storage
+  - Distributed File System
+  properties:
+  - type: Protobuf
+    url: grpc/seaweedfs-filer.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/filer.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-volume_server.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/volume_server.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-master.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/master.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-s3.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/s3.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-iam.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/iam.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-mq_broker.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/mq_broker.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-mq_agent.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/mq_agent.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-mq_schema.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/mq_schema.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-remote.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/remote.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-s3_lifecycle.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/s3_lifecycle.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-worker.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/worker.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-plugin.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/plugin.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-mount.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/mount.proto
+  - type: Protobuf
+    url: grpc/seaweedfs-mount_peer.proto
+    source: https://github.com/seaweedfs/seaweedfs/blob/master/weed/pb/mount_peer.proto
+  - type: Documentation
+    url: https://github.com/seaweedfs/seaweedfs/wiki
+  - type: Documentation
+    name: Filer Server API
+    url: https://github.com/seaweedfs/seaweedfs/wiki/Filer-Server-API
+  - type: Documentation
+    name: Master Server API
+    url: https://github.com/seaweedfs/seaweedfs/wiki/Master-Server-API
+  - type: Documentation
+    name: Volume Server API
+    url: https://github.com/seaweedfs/seaweedfs/wiki/Volume-Server-API
+  - type: Documentation
+    name: Amazon S3 API
+    url: https://github.com/seaweedfs/seaweedfs/wiki/Amazon-S3-API
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  artifacts_added: 17
+  pass: local-v5

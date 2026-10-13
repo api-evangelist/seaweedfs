@@ -1,0 +1,16 @@
+generated: '2026-10-13'
+method: none
+source:
+- https://zapier.com/apps/seaweedfs/integrations
+- https://n8n.io/integrations/seaweedfs/
+- https://composio.dev/toolkits/seaweedfs
+- https://monid.ai/tools/seaweedfs
+checked:
+- https://composio.dev/toolkits/seaweedfs
+- https://monid.ai/tools/seaweedfs
+- https://n8n.io/integrations/seaweedfs/
+- https://zapier.com/apps/seaweedfs/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
