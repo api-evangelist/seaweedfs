@@ -1,16 +1,53 @@
 generated: '2026-10-13'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/seaweedfs/integrations
 - https://n8n.io/integrations/seaweedfs/
 - https://composio.dev/toolkits/seaweedfs
 - https://monid.ai/tools/seaweedfs
 checked:
+- https://api.nuget.org/v3
 - https://composio.dev/toolkits/seaweedfs
+- https://crates.io/api/v1
 - https://monid.ai/tools/seaweedfs
 - https://n8n.io/integrations/seaweedfs/
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
 - https://zapier.com/apps/seaweedfs/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Go module proxy
+  partner: null
+  partner_match: null
+  type: register
+  direction: provider-built
+  category: official SDK (Go)
+  evidence: https://pkg.go.dev/github.com/seaweedfs/seaweedfs
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: Go module proxy (public registry JSON)
+    spec_file: null
+    language: Go
+    packages:
+    - name: github.com/seaweedfs/seaweedfs
+      version: v0.0.0-20261018195710-863efb3d35b5
+      released: '2026-10-18'
+      released_field: Time
+      lapsed: false
+      page: https://pkg.go.dev/github.com/seaweedfs/seaweedfs
+      repo_leg: github-org:seaweedfs
+      publisher_leg: org:seaweedfs
+      matched_by: github-org
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
 templates: []
