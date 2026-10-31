@@ -64,5 +64,92 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-SeaweedFS is a company surfaced via the API Evangelist harvest backlog (source: market-gap:object-storage) and added to the network as a stub for full-pipeline profiling.
-- https://seaweedfs.com
+SeaweedFS is a distributed file system and S3-compatible object store, open source at github.com/seaweedfs/seaweedfs with an Enterprise edition sold at seaweedfs.com (data recovery, self-healing storage, erasure coding automation, point-in-time recovery, support plans). Its components - master, volume, filer, S3 gateway, IAM and message-queue broker - talk over published gRPC services (179 RPCs across 14 .proto files) alongside HTTP and S3 interfaces documented in the project wiki.
+
+**Areas:** Company · Object Storage · Distributed File System · S3 Compatible · gRPC · Open Source · Storage
+
+## SeaweedFS on APIs.io
+
+Everything profiled for SeaweedFS is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/seaweedfs/](https://apis.io/providers/seaweedfs/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [SeaweedFS gRPC API](https://apis.io/apis/seaweedfs/seaweedfs-grpc/) — gRPC services exposed by SeaweedFS cluster components (Seaweed master, VolumeServer, SeaweedFiler, SeaweedS3, SeaweedIdentityAccessManagement,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Seaweedfs Domain Security](https://apis.io/security/seaweedfs/seaweedfs-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://seaweedfs.com)
+- [Documentation](https://seaweedfs.com/docs/deploy/)
+- [Getting started](https://seaweedfs.com/docs/deploy/)
+- [API reference](https://seaweedfs.com/docs/reference/ec_repair/)
+- [Pricing](https://seaweedfs.com/docs/pricing/)
+- [Support](https://seaweedfs.com/docs/support/)
+- [Changelog](https://github.com/seaweedfs/seaweedfs/releases)
+- [Blog](https://seaweedfs.com/blog/)
+- [Terms of service](https://seaweedfs.com/docs/terms/)
+- [GitHub](https://github.com/seaweedfs)
+
+## API Evangelist rating
+
+**Kin Score 27.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 24.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 21.1 |
+| Developer ergonomics | 42.9 |
+| Access clarity | 21.1 |
+
+**Agent readiness 12.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 9.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/seaweedfs/](https://apis.io/providers/seaweedfs/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for SeaweedFS: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/seaweedfs/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
